@@ -25,7 +25,7 @@ class SuperController extends AbstractController
         session_start();
 
         $clientGuzzle = new Client([
-            'base_uri' => 'https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/',
+            'base_uri' => 'https://superheroapi.com/api/10214898537337411phjp',
         ]);
 
         try {

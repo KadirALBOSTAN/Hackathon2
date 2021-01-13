@@ -1,12 +1,12 @@
 {
-    "name": "",
-    "description": "Hackathon 2",
+    "name": "kadir/hackathon2",
+    "description": "Hackathon",
     "authors": [
-        {"name": "Kadir Le BEAU GOSSE"},
-        {"name": "Arthur LE RETARDATAIRE"},
-        {"name": "Yunus LE FULLSTACK"},
-        {"name": "Mathieu LE FULLSTEACK"},
-        {"name": "Erwan LE NEJAU"}
+        {"name": "Kadir LEBEAUGOSSE"},
+        {"name": "Arthur LERETARDATAIRE"},
+        {"name": "Kadir LEFULLSTACK"},
+        {"name": "Kadir LEFULLSTEACK"},
+        {"name": "Kadir LENEJAU"}
     ],
     "minimum-stability": "stable",
     "require": {
