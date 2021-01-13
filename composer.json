@@ -1,0 +1,25 @@
+{
+    "name": "",
+    "description": "Hackathon 2",
+    "authors": [
+        {"name": "Kadir Le BEAU GOSSE"},
+        {"name": "Arthur LE RETARDATAIRE"},
+        {"name": "Yunus LE FULLSTACK"},
+        {"name": "Mathieu LE FULLSTEACK"},
+        {"name": "Erwan LE NEJAU"}
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "nikic/fast-route": "^1.2",
+        "twig/twig": "^2.4",
+        "squizlabs/php_codesniffer": "*",
+        "guzzlehttp/guzzle": "^6.3",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/",
+            "App\\": "app/"
+        }
+    }
+}

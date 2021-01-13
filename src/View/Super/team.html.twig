@@ -1,0 +1,61 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Choisis ton équipe{% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="assets/css/team.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Open+Sans" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<section class="container-fluid p-5">
+    <form id="team" method="post" action="/choosehero">
+        <div class="row">
+            <div class="col text-center mt-5">
+                <h2 class="bangers titre-bleu">Choisis tes 6 fighters </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col white text-center mb-5">
+                <p>Nombre de fighters sélectionnés: <span id="counter">0</span></p>
+                <div id="submit" type="submit" class="btn btn-team btn-primary">OK</div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            {% for i in 0..11 %}
+                <div class="col-2">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{ preselectedHeroes[i].photo}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title text-center bangers">{{ preselectedHeroes[i].name }}</h5>
+                            <div class="card-text">
+                                <ul>
+                                    <li>Intelligence:{{ preselectedHeroes[i].intelligence }}</li>
+                                    <li>Force:{{ preselectedHeroes[i].strength }}</li>
+                                    <li>Endurance:{{ preselectedHeroes[i].durability }}</li>
+                                    <li>Puissance:{{ preselectedHeroes[i].power}}</li>
+                                    <li>Tactique:{{ preselectedHeroes[i].combat }}</li>
+                                    <li>Vitesse:{{ preselectedHeroes[i].speed }}</li>
+                                </ul>
+                            </div>
+                                <div class="btn-group btn-group-toggle btn-btn-primary" data-toggle="buttons">
+                                    <label class="yes btn">
+                                        <input type="radio" name="ids[{{ i }}]" value="{{ preselectedHeroes[i].id }}"> Oui
+                                    </label>
+                                    <label class="no btn active">
+                                        <input type="radio" name="options" checked> Non
+                                    </label>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </form>
+</section>
+{% endblock %}
+
+{% block javascript %}
+    <script src="assets/javascript/team.js"></script>
+{% endblock %}

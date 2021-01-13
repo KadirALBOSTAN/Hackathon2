@@ -1,0 +1,55 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Résultat du jeu{% endblock %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="assets/css/game_result.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Open+Sans" rel="stylesheet"> {% endblock %}
+{% block body %}
+    <div class="container-fluid">
+        <h2>Tu as {{ win }} !</h2>
+        <div class="row">
+        <table class="col-6">
+            <tr>
+                <th>ROUND</th>
+                <th>{{ player.name }}</th>
+                <th>CPU</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>{{ playerPvs.0 }}</td>
+                <td>{{ cpuPvs.0 }}</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>{{ playerPvs.1 }}</td>
+                <td>{{ cpuPvs.1 }}</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>{{ playerPvs.2 }}</td>
+                <td>{{ cpuPvs.2 }}</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>{{ playerPvs.3 }}</td>
+                <td>{{ cpuPvs.3 }}</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>{{ playerPvs.4 }}</td>
+                <td>{{ cpuPvs.4 }}</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>{{ playerPvs.5 }}</td>
+                <td>{{ cpuPvs.5 }}</td>
+            </tr>
+
+        </table>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a href="/" class="btn btn-result btn-choose btn-primary">REJOUER</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

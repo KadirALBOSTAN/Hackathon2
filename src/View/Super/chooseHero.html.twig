@@ -1,0 +1,64 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="assets/css/choosehero.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Open+Sans" rel="stylesheet">
+{% endblock %}
+{% block title %}Choix du héros{% endblock %}
+
+{% block body %}
+    <div class ="container-fluid bg-choose">
+<section class="container">
+    <div class="row">
+        <div class="col-8 type  my-4">
+            <p>Le prochain round sera de type : {{ attakType }}</p>
+        </div>
+        <div class="col-4 text-center numero my-4">
+            <p>Tour n° : {{ round }}</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 m-3">
+            <form method="post" action="/round">
+                <div class="row">
+                    {% for i in 0..nbHeroes %}
+                        <div class="col-3 m-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <img class="card-img-top" src="{{ fightersPlayer[i].photo }}" alt="Card image cap">
+                                        <div class="card-body">
+                                            <div class="card-text">
+                                                <ul>
+                                                    <li>Intelligence: {{ fightersPlayer[i].intelligence }}</li>
+                                                    <li>Force: {{ fightersPlayer[i].strength }}</li>
+                                                    <li>Vitesse: {{ fightersPlayer[i].speed }}</li>
+                                                    <li>Endurance: {{ fightersPlayer[i].durability }}</li>
+                                                    <li>Pouvoir: {{ fightersPlayer[i].power }}</li>
+                                                    <li>Combat: {{ fightersPlayer[i].combat }}</li>
+                                                </ul>
+                                            </div>
+                                            <div class="form-check card-footer">
+                                                <input class="form-check-input" type="radio" name="hero" id="hero{{ i }}" value="{{ i }}">
+                                                <label class="form-check-label" for="hero{{ i }}">
+                                                    {{ fightersPlayer[i].name }}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <div class="row m-3">
+                        <div class="col">
+                            <input type="submit" class="btn btn-choose btn-primary" value="Envoyer au combat !">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+    </div>
+{% endblock %}

@@ -1,0 +1,45 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    background-color: #DADADA;
+}
+.form-check-label {
+    font-family: 'Bangers', cursive;
+    font-size: 2em;
+}
+
+.type {
+    font-family: 'Bangers', cursive;
+    font-size: 2.5em;
+}
+
+.numero {
+    font-family: 'Bangers', cursive;
+    font-size: 1.5em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.bg-choose {
+    background-image: url("../images/background_gris.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 60% 40%;
+}
+
+.btn-choose {
+    font-family: 'Bangers', cursive;
+    font-size: 2.5em;
+    background-color: #FED410;
+    color: black;
+    border: none;
+    margin-left: 300px;
+}
+
+.btn-choose:hover {
+    background-color: #FF3F5F;
+}
+
+

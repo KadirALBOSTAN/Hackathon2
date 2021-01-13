@@ -1,0 +1,45 @@
+.background-img {
+    background-image: url('../images/banner.png');
+    height: 580px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 80px;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+.bangers {
+    font-family: 'Bangers', cursive;
+}
+
+h2 {
+    font-size: 5em;
+    color: #49D3EA;
+}
+
+.btn-index {
+    font-family: 'Bangers', cursive;
+    font-size: 2.5em;
+    background-color: #FED410;
+    color: black;
+    border: none;
+    width: 200px;
+}
+
+.btn:hover {
+    background-color: #FF3F5F;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.bg-grey {
+    background-color: #1D1E1C;
+    background-size:cover;
+    background-position: bottom;
+
+}
